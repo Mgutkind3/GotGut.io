@@ -5,7 +5,7 @@ This guide will help you customize your portfolio website with your own informat
 ## 📝 Quick Checklist
 
 Before deploying, make sure to update:
-- [ ] Personal information (name, title, bio)
+- [x] Personal information (name, title, bio)
 - [ ] Work experience and education
 - [ ] Skills and proficiency levels
 - [ ] Projects with real links and descriptions

@@ -71,7 +71,7 @@ export default function Hero() {
             Senior Software Engineer
           </h2>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Crafting beautiful digital experiences through elegant code and thoughtful design
+          Engineer, creator, and lifelong tinkerer — turning ideas into systems that actually work.
           </p>
         </motion.div>
 

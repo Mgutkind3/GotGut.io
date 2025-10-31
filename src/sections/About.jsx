@@ -2,12 +2,15 @@ import { motion } from 'framer-motion';
 import FadeInSection from '../components/FadeInSection';
 
 const interests = [
-  { icon: '💻', title: 'Clean Code', description: 'Writing maintainable, efficient code' },
-  { icon: '🎨', title: 'Design', description: 'Creating beautiful user experiences' },
-  { icon: '🚀', title: 'Innovation', description: 'Exploring cutting-edge technologies' },
-  { icon: '📚', title: 'Learning', description: 'Continuous growth and improvement' },
-  { icon: '🤝', title: 'Collaboration', description: 'Working with talented teams' },
-  { icon: '⚡', title: 'Performance', description: 'Building fast, scalable solutions' }
+  { icon: '🤖', title: 'AI & Automation', description: 'Building systems that think, adapt, and optimize themselves' },
+  { icon: '☁️', title: 'Cloud Engineering', description: 'Designing reliable, efficient infrastructure at scale' },
+  { icon: '🧩', title: 'Problem Solving', description: 'Breaking complex challenges into elegant, practical solutions' },
+  { icon: '⚙️', title: 'Side Projects', description: 'Experimenting with new ideas and building tools that make life easier' },
+  { icon: '🏃‍♂️', title: 'Triathlon Training', description: 'Balancing endurance, discipline, and growth as a hybrid athlete' },
+  { icon: '🪵', title: 'DIY & Design', description: 'Creating things by hand — from woodworking to smart home projects' },
+  { icon: '🌲', title: 'Outdoors', description: 'Recharging through hiking, fishing, and exploring new places' },
+  { icon: '💡', title: 'Entrepreneurship', description: 'Turning ideas into meaningful, impactful products' },
+  { icon: '🔥', title: 'Continuous Growth', description: 'Always learning, iterating, and pushing beyond comfort zones' }
 ];
 
 export default function About() {
@@ -26,26 +29,35 @@ export default function About() {
         </FadeInSection>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          {/* Left Column - Introduction */}
+          {/* Left Column - Introduction with Headshot */}
           <FadeInSection delay={0.2}>
             <div className="space-y-6">
               <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-800">
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Hi, I'm Michael! 👋</h3>
+                {/* Headshot integrated into intro */}
+                <div className="flex flex-col items-center mb-6">
+                  <div className="relative mb-4">
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur-xl opacity-30"></div>
+                    <img 
+                      src="/headshot.jpeg" 
+                      alt="Michael Gutkind"
+                      className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-cyan-500/50 shadow-2xl"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-cyan-400">Hi, I'm Michael! 👋</h3>
+                </div>
+                
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
-                    I'm a passionate software engineer with a love for creating elegant solutions to complex problems. 
-                    My journey in tech started with curiosity and has evolved into a career focused on building 
-                    impactful digital experiences.
+                  I'm a Senior Software Engineer who's passionate about building systems that are as smart as they are reliable. I specialize in automation, AI-driven infrastructure, and cloud optimization — finding creative ways to make technology do more with less.
                   </p>
                   <p>
-                    With expertise in full-stack development, I specialize in modern web technologies and have a 
-                    keen eye for design. I believe in writing clean, maintainable code and creating user interfaces 
-                    that are both beautiful and functional.
+                  Over the years, I've worked on projects that range from self-healing systems and machine learning–powered troubleshooting tools to internal dashboards that simplify complex workflows. I love taking messy, complicated problems and designing solutions that feel effortless once they're built.
                   </p>
                   <p>
-                    When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                    projects, or sharing knowledge with the developer community. I'm always excited to take on 
-                    new challenges and collaborate on innovative projects.
+                    Outside of work, I'm usually creating something — whether it's a new app, a side project, or a DIY build in my garage. I'm also a hybrid athlete and triathlon enthusiast, always chasing that balance between endurance, focus, and curiosity.
+                  </p>
+                  <p>
+                    At the core, I'm driven by the same thing in every project: the challenge of turning ideas into something real — something that works, scales, and hopefully inspires others to build, too.
                   </p>
                 </div>
               </div>

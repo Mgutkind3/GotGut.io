@@ -72,7 +72,7 @@ export default function Contact() {
                   <span className="text-3xl">📍</span>
                   <div>
                     <h4 className="font-semibold text-white">Location</h4>
-                    <p className="text-gray-400 text-sm">Available for remote work</p>
+                    <p className="text-gray-400 text-sm">Bedminster, NJ</p>
                   </div>
                 </motion.div>
               </div>
