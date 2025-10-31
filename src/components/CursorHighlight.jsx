@@ -13,9 +13,10 @@ export default function CursorHighlight() {
 
   return (
     <div
-      className="pointer-events-none fixed top-0 left-0 z-50 transition-transform duration-75"
+      className="pointer-events-none fixed top-0 left-0 z-50"
       style={{
         transform: `translate(${position.x - 75}px, ${position.y - 75}px)`,
+        transition: 'transform 0.05s ease-out',
       }}
     >
       <div className="w-36 h-36 rounded-full bg-indigo-500/10 blur-2xl" />
