@@ -95,6 +95,19 @@ const education = [
   }
 ];
 
+const certifications = [
+  {
+    name: 'AWS Certified Solutions Architect - Associate',
+    issuer: 'Amazon Web Services (AWS)',
+    icon: '☁️'
+  },
+  {
+    name: 'Python Scripting for Geoprocessing Workflows',
+    issuer: 'ESRI',
+    icon: '🐍'
+  }
+];
+
 export default function Experience() {
   return (
     <section id="experience" className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-950 text-white px-6 py-24">
@@ -104,9 +117,9 @@ export default function Experience() {
             <motion.h2 
               className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"
             >
-              Experience & Education
+              Experience, Education & Certifications
             </motion.h2>
-            <p className="text-gray-400 text-lg">My professional journey and background</p>
+            <p className="text-gray-400 text-lg">My professional journey, background, and credentials</p>
           </div>
         </FadeInSection>
 
@@ -188,16 +201,47 @@ export default function Experience() {
           </div>
         </div>
 
+        {/* Certifications */}
+        <div className="mb-20">
+          <FadeInSection delay={0.2}>
+            <h3 className="text-2xl font-bold mb-10 text-indigo-400">Certifications</h3>
+          </FadeInSection>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {certifications.map((cert, index) => (
+              <FadeInSection key={index} delay={0.1 * index}>
+                <motion.div
+                  whileHover={{ scale: 1.03, y: -5 }}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-indigo-500/50 transition-all"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="text-4xl">{cert.icon}</span>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-bold text-white mb-2">{cert.name}</h4>
+                      <p className="text-indigo-400 font-medium text-sm">{cert.issuer}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </FadeInSection>
+            ))}
+          </div>
+        </div>
+
         {/* Download Resume Button */}
         <FadeInSection delay={0.4}>
           <div className="mt-12 text-center">
-            <motion.button
+            <motion.a
+              href="/resume.pdf"
+              download="Michael_Gutkind_Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-full transition-all shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-full transition-all shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50"
             >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
               Download Resume
-            </motion.button>
+            </motion.a>
           </div>
         </FadeInSection>
       </div>
