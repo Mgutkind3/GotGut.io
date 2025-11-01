@@ -88,14 +88,6 @@ export default function Footer() {
                   mikegutkind@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <span>📍</span>
-                <span>Available for remote work</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>💼</span>
-                <span>Open to opportunities</span>
-              </li>
             </ul>
           </div>
         </div>

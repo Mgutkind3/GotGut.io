@@ -7,6 +7,7 @@ import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import CursorHighlight from './components/CursorHighlight';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <Projects />
       <Contact />
       <Footer />
+      <Analytics />
     </div>
   );
 }
